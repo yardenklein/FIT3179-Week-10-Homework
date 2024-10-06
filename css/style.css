@@ -1,0 +1,43 @@
+#choropleth_map {
+	top: 100px;
+	bottom: 100px;
+	left: 100px;
+	right: 100px;
+}
+
+#worldmap, #linegraph {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.vega-bindings {
+	margin-left: 20px; /* Adds spacing between the graph and the dropdown */
+	display: flex;
+	flex-direction: column; /* Stack the dropdown under the legend */
+	position: relative;
+	top: 100px; /* Adjust to align with the legend */
+}
+
+.vega-bindings select {
+	font-size: 16px;
+	padding: 5px;
+	width: 200px; /* Adjust dropdown width */
+}
+
+.vega-embed {
+	display: flex;
+	justify-content: center; /* Ensures the graph stays centered */
+}
+
+/* Make all text inside the graph consistent without changing the annotation sizes */
+#linegraph svg text {
+	font-family: "Arial", sans-serif; /* Replace with the font you're using in the rest of your site */
+	font-size: 30px; /* Keep the font size consistent with the rest of the chart, but not affecting annotations */
+	fill: black;
+}
+
+/* Keep annotations the same font as other text, but without changing their size */
+#linegraph svg text.annotation {
+	font-family: "Arial", sans-serif; /* Ensure it's consistent */
+}
